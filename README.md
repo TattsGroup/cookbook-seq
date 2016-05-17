@@ -1,8 +1,8 @@
 # Seq Server Chef Cookbook
 
-Master branch: [! [Build Status](https://travis-ci.org/TattsGroup/cookbook-seq.png?branch=master)](https://travis-ci.org/TattsGroup/cookbook-seq)
+[![Build Status](https://travis-ci.org/TattsGroup/cookbook-seq.png?branch=master)](https://travis-ci.org/TattsGroup/cookbook-seq)
 
-This is an Chef cookbook for [Seq](http://getseq.net) a structured logging server.
+This is an Chef cookbook for [Seq](http://getseq.net), a structured logging server.
 
 # Requirements
 
