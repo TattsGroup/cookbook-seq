@@ -1,24 +1,34 @@
 # Seq Server Chef Cookbook
 
+Master branch: [! [Build Status](https://travis-ci.org/TattsGroup/cookbook-seq.png?branch=master)](https://travis-ci.org/TattsGroup/cookbook-seq)
+
 This is an Chef cookbook for [Seq](http://getseq.net) a structured logging server.
 
-## Recipes
+# Requirements
 
-* `seq::default` - Installs and configures a default Seq instance
+## Supported Operating Systems
+
+* Windows 7
+* Windows Server 2008
+* Windows Server 2008R2
+* Windows 8
+* Windows Server 2012
+* Windows Server 2012R2
+
+## Cookbooks
+
+* ms_dotnet
 
 ## Attributes
 
 * `node['seq']['source']` - Source URL to obtain Seq installation msi
 * `node['seq']['checksum']` - Source URL to obtain Seq installation
 
-## Supported Operating Systems
+# Usage
 
-Windows Server 2012
-Windows Server 2012r2
+## default
 
-## Cookbooks
-
-* ms_dotnet
+Installs and configures a default Seq instance.  Will ensure .NET Framework 4.5.2 is installed.
 
 ## Examples
 

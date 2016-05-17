@@ -3,17 +3,17 @@ require 'win32/service'
 package 'Seq' do
   action :install
   source node['seq']['source']
-  not_if do File.exists?('C:\Program Files\Seq\seq.exe') end
+  not_if { File.exist?('C:\Program Files\Seq\seq.exe') }
 end
 
 execute 'Install Service' do
   command '"C:\Program Files\Seq\seq.exe" install'
   action :run
-  not_if do ::Win32::Service.exists?('Seq') end
+  not_if { ::Win32::Service.exists?('Seq') }
 end
 
 execute 'Start Service' do
   command '"C:\Program Files\Seq\seq.exe" start'
   action :run
-  not_if do ::Win32::Service.status('Seq').current_state == "running" end
+  not_if { ::Win32::Service.status('Seq').current_state == 'running' }
 end
