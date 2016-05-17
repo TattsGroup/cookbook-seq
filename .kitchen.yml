@@ -5,7 +5,6 @@ driver:
 
 provisioner:
   name: chef_zero
-  #require_chef_omnibus: latest
 
 # Uncomment the following verifier to leverage Inspec instead of Busser (the
 # default verifier)
