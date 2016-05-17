@@ -1,8 +1,20 @@
 require 'win32/service' if RUBY_PLATFORM =~ /mswin|mingw32|windows/
 
-package 'Seq' do
+reboot 'now' do
+  action :nothing
+  reason 'Cannot continue Chef run without a reboot.'
+end
+
+ms_dotnet_framework '4.5.2' do
+  action            :install
+  package_sources   node['ms_dotnet']['v4']['package_sources']
+  notifies :reboot_now, 'reboot[now]', :immediately
+end
+
+windows_package 'Seq' do
   action :install
   source node['seq']['source']
+  checksum node['seq']['checksum']
   not_if { File.exist?('C:\Program Files\Seq\seq.exe') }
 end
 

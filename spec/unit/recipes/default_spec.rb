@@ -4,9 +4,15 @@ require 'win32_helper'
 describe 'seq::default' do
   context 'on windows 2012r2' do
     let(:chef_run) do
-      ChefSpec::ServerRunner.new(platform: 'windows', version: '2012R2') do
+      ChefSpec::ServerRunner.new(platform: 'windows', version: '2012R2', log_level: :error) do
         # allow_any_instance_of(::Win32::Service).to receive(:exists?).and_return(false)
       end.converge(described_recipe)
+    end
+
+    context 'installing .net 4.5.2' do
+      it 'installs .net 4.5.2' do
+        expect(chef_run).to install_ms_dotnet_framework('4.5.2')
+      end
     end
 
     context 'when installing Seq' do
