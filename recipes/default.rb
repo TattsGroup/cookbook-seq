@@ -1,6 +1,4 @@
-if RUBY_PLATFORM =~ /mswin|mingw32|windows/
-  require "win32/service"
-end
+require 'win32/service' if RUBY_PLATFORM =~ /mswin|mingw32|windows/
 
 package 'Seq' do
   action :install
