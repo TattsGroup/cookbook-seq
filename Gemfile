@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'berkshelf'
+gem 'stove'
 gem 'chef',       '>= 12.5'
 gem 'chefspec',   '>= 4.2'
 gem 'fauxhai',    '>= 2.2'
