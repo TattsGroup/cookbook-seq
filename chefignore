@@ -100,3 +100,5 @@ Strainerfile
 ###########
 .vagrant
 Vagrantfile
+
+bin/*
