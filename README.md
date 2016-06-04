@@ -46,6 +46,7 @@ include_recipe 'seq::license'
 > Note: Do not use the sample license below as it is designed for testing only, attempting to use it in a production setting will most likely break your Seq instance.
 
 node.json:
+
 ```json
 {
   "seq": {
