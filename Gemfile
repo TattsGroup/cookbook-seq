@@ -11,4 +11,3 @@ gem 'rspec', '~> 3.0'
 gem 'rubocop', '~> 0.37'
 
 gem 'thor-scmversion', '~> 1.7'
-
