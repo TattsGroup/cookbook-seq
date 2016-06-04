@@ -36,6 +36,17 @@ Installs and configures a default Seq instance.  Will ensure .NET Framework 4.5.
 include_recipe 'seq::default'
 ```
 
+## Maintenance
+
+### Releasing Changes to Supermarket
+```
+rake rubocop
+rake foodcritic
+rake rspec
+
+knife cookbook site share seq --user <username> --key <username>.pem
+```
+
 ## Copyright & License
 
 Copyright (c) 2016 Tatts Group Limited

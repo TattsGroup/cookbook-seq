@@ -5,7 +5,6 @@ describe 'seq::default' do
   context 'on windows 2012r2' do
     let(:chef_run) do
       ChefSpec::ServerRunner.new(platform: 'windows', version: '2012R2', log_level: :error) do
-        # allow_any_instance_of(::Win32::Service).to receive(:exists?).and_return(false)
       end.converge(described_recipe)
     end
 

@@ -16,9 +16,11 @@ suites:
   - name: local
     run_list:
       - recipe[seq::default]
+      - recipe[seq::license]
     attributes:
       seq:
         source: http://10.0.1.31:8888/Seq-3.1.17.msi
+        license: 'U2VyaWFsOiBTREVTLTAxLU0zMjg3NzAwCklzc3VlZC1CeTogRGF0YWx1c3QgUHR5IEx0ZApMaWNlbnNlZC1UbzogVGF0dHMgR3JvdXAsIFRlc3QgT25seQpWYWxpZC1Gcm9tOiBTYXQsIDA0IEp1biAyMDE2IDAzOjAwOjUxIEdNVApVcGdyYWRlLVVudGlsOiBTdW4sIDA0IEp1biAyMDE3IDAzOjAwOjUxIEdNVApMaWNlbnNlZC1Vc2VyczogMApOb3RlczogRm9yIGF1dG9tYXRlZCBjb29rYm9vay1zZXEgdGVzdGluZyBvbmx5ClNpZ25hdHVyZTogNEJzMkcrazU4b0hxL1hlTFlvZTUzZHpjYTFTdUZBRUM1R0N1MmxZd0F6Ym5rdGZEQzcwcllyd2IyK1RqTHp2cml4RDYKICBodDFjYlUvNmZlWlRIYURpeHlTTlRRUVJsbUM1RTJvRFMzdlBjdXBIbXFhWW5OTDR1ZnJVeE96Zk04cnZPK3pKSjRpOTRkVlZHMEU2YgogIC9aeU5FcGFqRldWVFk1K3d3Z1VPOVA3M2UvbTNjdm52K0pWSGs3bDNzMk5yVlJzUzNSREhXTWNDSlk5ZzRscjB1RWFoQXQzdjl3NzdTCiAgWkFCMWREdnBDTWVmVXViWlIwUkNaRXMxNGVDVWZiaWJWOHZFWkxDOVRrSHhLNWdOYUpCYWN4Yzd3UE5MYVdzVG42ZkNFS2xTeUhITkkKICBKcG9aRGxscDNkY2tJT1MvZmRUOTIxRXFkUjY0VkQyTFloQ2xseDgrcFV3PT0K'
       ms_dotnet:
         v4:
           version: '4.5.2'

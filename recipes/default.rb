@@ -1,3 +1,9 @@
+#
+# Cookbook Name:: seq
+# Recipe:: default
+#
+# Copyright (c) 2016 Tatts Group, All Rights Reserved.
+
 require 'win32/service' if RUBY_PLATFORM =~ /mswin|mingw32|windows/
 
 reboot 'now' do

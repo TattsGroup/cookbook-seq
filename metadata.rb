@@ -6,10 +6,15 @@ description       'Installs/Configures Seq'
 source_url        'https://github.com/TattsGroup/cookbook-seq'
 issues_url        'https://github.com/TattsGroup/cookbook-seq/issues'
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+chef_version '>= 12'
 begin
-  IO.read(File.join(File.dirname(__FILE__), 'VERSION'))
+  version IO.read(File.join(File.dirname(__FILE__), 'VERSION'))
 rescue
-  '0.1.0'
+  version '0.1.0'
 end
+
+recipe 'seq::default', 'Installs and configures a Seq server instance'
+
+supports 'windows'
 
 depends 'ms_dotnet'
